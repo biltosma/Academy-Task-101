@@ -16,11 +16,10 @@ btnNew.setAttribute("id", "naujas");
 btnNew.setAttribute("type", "button");
 btnNew.setAttribute("class", "btn btn-info mb-2");
 
-// --------Nueruoto sarašo Tag'as
+// --------Numeruoto sarašo Tag'as
 const sarasas = document.createElement('ol');
 sarasas.setAttribute("id", "list");
 sarasas.setAttribute("class", "list-group list-group-numbered");
-
 
 start()
 // funkcijos----
@@ -36,7 +35,6 @@ function start() {
   })
   .catch(err => console.log('ERROR! ', err))
 }
-
 
 // -------------iteruoja JSON duomenis, grazina pavadinima
 function getData(a) {
@@ -148,6 +146,3 @@ function newForm() {
 //     })
 //     .catch(err => console.log(err))
 // }
-
-
-
