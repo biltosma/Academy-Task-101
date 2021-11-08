@@ -110,7 +110,6 @@ async function addList() {
     let body = document.getElementById('body').value;
     let userId = document.getElementById('userId').value;
     let postData = { title: title, body: body, userId: userId };
-    console.log(postData);
     let rez = await axios.post(url, postData);
     details(rez);
   } catch { err => console.log(err) }
