@@ -15,7 +15,7 @@ btnNew.textContent = 'New Record Form';
 btnNew.setAttribute("id", "naujas");
 btnNew.setAttribute("type", "button");
 btnNew.setAttribute("class", "btn btn-info mb-2");
-// --------Numeruoto sarašo <ol> Tag'as
+// --------Numeruoto sčrašo <ol> Tag'as
 const sarasas = document.createElement('ol');
 sarasas.setAttribute("id", "list");
 sarasas.setAttribute("class", "list-group list-group-numbered");
@@ -33,13 +33,13 @@ function empty(err) {
   pavadinimas.textContent = 'Ups!.. Sąrašas tuščias...';
   errorMsg.textContent = `${err}`;
 }
-// ------------ GET:rodo puslpayje bendra sarasa-----------
+// ------------ GET:rodo puslpayje bendrą sąrašą-----------
 function start() {
   axios.get(url)
     .then(res => getData(res))
     .catch(err => empty(err))
 }
-// -------------GET: Rodomos iraso detales-----------------
+// -------------GET: Rodomos įrašo detalės-----------------
 function showDetails(id) {
   axios.get(`${url}/${id}`)
     .then(res => details(res))
@@ -51,13 +51,13 @@ async function addList(e) {
   let data = Object.fromEntries(new FormData(e.target));
   await postRez(url, data);
 }
-// --------------POST: Rodomos iraso detales-----------------
+// --------------POST: Rodomos įrašo detalės-----------------
 async function postRez(link, data) {
   await axios.post(link, data)
     .then(res => details(res))
     .catch(err => empty(err))
 }
-// -------------HTML saraso puslapis #1---------------------
+// -------------HTML sąrašo puslapis #1---------------------
 function getData(a) {
   pavadinimas.textContent = 'Bendras Sąrašas';
   btn.appendChild(btnNew);
@@ -70,7 +70,7 @@ function getData(a) {
   }
   sarasas.innerHTML = html;
 }
-// -------------HTML vieno iraso (details) puslapis #2---------------------
+// -------------HTML vieno įrašo (details) puslapis #2---------------------
 function details(res) {
   btn.textContent = "";
   form.innerHTML = "";
@@ -87,7 +87,7 @@ function details(res) {
 </div>`;
   div.appendChild(btnBack)
 }
-// -------------HTML Naujo iraso puslapis #3---------------------
+// -------------HTML Naujo įrašo puslapis #3---------------------
 function newForm() {
   btn.textContent = "";
   div.textContent = "";
