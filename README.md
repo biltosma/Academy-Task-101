@@ -1,5 +1,5 @@
 # Academy-Task-101
-užduotis ir jos vykdymas
-Pateiktas uzduoties sprendinys.
+Užduotis ir jos vykdymas.
+Pateiktas užduoties sprendinys.
 
-NAUJA!---folderyje "UPDATE 2021-11-11" sudeliotas kodas tvarkingai, bei pakoreguota dalis funkciju.
+NAUJA!---folderyje "UPDATE 2021-11-11" atnaujintas kodas ir jo išdėstymas, bei pakoreguota dalis funkciju.
