@@ -27,11 +27,10 @@ btnNew.addEventListener('click', newForm)
 form.addEventListener('submit', addList);
 
 
-
 // funkcijos---------
 // ------------Jei klaida, parodo ekrane klaidą------------
 function empty(err) {
-  pavadinimas.textContent = 'Ups!.. Sąrašas tušias...';
+  pavadinimas.textContent = 'Ups!.. Sąrašas tuščias...';
   errorMsg.textContent = `${err}`;
 }
 // ------------ GET:rodo puslpayje bendra sarasa-----------
